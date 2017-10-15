@@ -6,7 +6,7 @@ class CryptoContainer extends Component {
     render() {
         return (
             <View>
-                <Text>hola</Text>
+                <Text>Container</Text>
             </View>
         )
     }
