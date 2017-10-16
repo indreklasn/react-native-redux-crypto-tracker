@@ -28,6 +28,7 @@
     "redux-logger": "^3.0.6"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "expo": "^21.0.0",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.48.4",
