@@ -1,10 +1,10 @@
 ## Demo
 
-![demo gif](https://i.imgur.com/veY8jqm.gifv)
+![demo static](https://i.imgur.com/tQqHo2f.png)
 
 _________
 
-![demo static](https://i.imgur.com/tQqHo2f.png)
+![demo gif](https://i.imgur.com/jprBuy5.gifv)
 
 ____________
 
