@@ -10,13 +10,15 @@ import CoinCard from './CoinCard';
 class CryptoContainer extends Component {
 
     componentWillMount() {
+        console.log(this.props);        
         this.props.FetchCoinData();
+
     }
 
     renderCoinCards() {
-        console.log("inside renderCoinCards");
+        console.log(this.props);
         return this.props.crypto.data[0].map(coin => 
-            <Text>dsdsdsd</Text>
+            <CoinCard imageID={coin.symbol} />
         )
     }
 
@@ -25,23 +27,24 @@ class CryptoContainer extends Component {
 
         const { crypto } = this.props;
 
-        if (!crypto.isFetching) {
+        if (crypto.isFetching) {
             return (
-                <ScrollView>
-                    { this.renderCoinCards.bind(this) }
-                </ScrollView>
+                <View>
+                    <Spinner
+                        visible={crypto.isFetching}
+                        textContent={"Loading..."}
+                        textStyle={{color: '#253145'}}
+                        animation="fade"
+                    />
+                </View>
             )
+ 
         }
 
         return (
             <View>
-                <Spinner
-                visible={crypto.isFetching}
-                textContent={"Loading..."}
-                textStyle={{color: '#253145'}}
-                animation="fade"
-                />
-        </View>
+                <Text>{this.renderCoinCards()}</Text>
+            </View>
         )
         
 
