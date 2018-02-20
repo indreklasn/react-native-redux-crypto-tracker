@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
@@ -6,7 +6,7 @@ import Spinner from 'react-native-loading-spinner-overlay';
 import FetchCoinData from './../Actions/FetchCoinData';
 import CoinCard from './CoinCard';
 
-class CryptoContainer extends Component {
+class CryptoContainer extends React.Component {
 
     componentWillMount() {
         this.props.FetchCoinData();
